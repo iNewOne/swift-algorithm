@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		03338BC4258C8C9F00D38383 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03338BC3258C8C9F00D38383 /* main.swift */; };
+		03604C2E25947C2E00B5B8CC /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03604C2D25947C2E00B5B8CC /* Double.swift */; };
+		03B6690E2590A2740023E1E9 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B6690D2590A2740023E1E9 /* Coins.swift */; };
+		03B669112590A2940023E1E9 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B669102590A2940023E1E9 /* Sort.swift */; };
+		03B669162590A40A0023E1E9 /* Fib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B669152590A40A0023E1E9 /* Fib.swift */; };
+		03B6691925919AD80023E1E9 /* Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B6691825919AD80023E1E9 /* Queen.swift */; };
+		03B669252592F24B0023E1E9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B669242592F24B0023E1E9 /* Config.swift */; };
+		03B66928259321630023E1E9 /* Dept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B66927259321630023E1E9 /* Dept.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		03338BC0258C8C9F00D38383 /* 算法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "算法"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03338BC3258C8C9F00D38383 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		03604C2D25947C2E00B5B8CC /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		03B6690D2590A2740023E1E9 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
+		03B669102590A2940023E1E9 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		03B669152590A40A0023E1E9 /* Fib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fib.swift; sourceTree = "<group>"; };
+		03B6691825919AD80023E1E9 /* Queen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queen.swift; sourceTree = "<group>"; };
+		03B669242592F24B0023E1E9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		03B66927259321630023E1E9 /* Dept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dept.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				03338BC3258C8C9F00D38383 /* main.swift */,
+				03B6690D2590A2740023E1E9 /* Coins.swift */,
+				03B669102590A2940023E1E9 /* Sort.swift */,
+				03B669152590A40A0023E1E9 /* Fib.swift */,
+				03B6691825919AD80023E1E9 /* Queen.swift */,
+				03B66927259321630023E1E9 /* Dept.swift */,
+				03B669242592F24B0023E1E9 /* Config.swift */,
+				03604C2D25947C2E00B5B8CC /* Double.swift */,
 			);
 			path = "算法";
 			sourceTree = "<group>";
@@ -119,7 +140,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B66928259321630023E1E9 /* Dept.swift in Sources */,
+				03B6691925919AD80023E1E9 /* Queen.swift in Sources */,
+				03604C2E25947C2E00B5B8CC /* Double.swift in Sources */,
+				03B6690E2590A2740023E1E9 /* Coins.swift in Sources */,
+				03B669162590A40A0023E1E9 /* Fib.swift in Sources */,
 				03338BC4258C8C9F00D38383 /* main.swift in Sources */,
+				03B669112590A2940023E1E9 /* Sort.swift in Sources */,
+				03B669252592F24B0023E1E9 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Queue: NSObject {
+class Queen: NSObject {
     var res = [[String]]()
-    func solveQueue(n: Int) -> [[String]] {
+    func solveQueen(n: Int) -> [[String]] {
         let string = String(repeating: "E", count: n)
         var board = Array(repeating: string, count: n)
         backtrack(&board, row: 0)
