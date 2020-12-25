@@ -60,8 +60,10 @@ class Solution {
 //
 //print(dept.minDepth(nodeA))
 
-let clock = Clock()
-print(clock.BFS("1112", ["1111", "1113"]))
+//let clock = Clock()
+//print(clock.BFS("1112", ["1111", "1113"]))
 
 
+let w = SlideWindow()
+print(w.minStr("ADBBECADFSASFBNAC", "ABC"))
 

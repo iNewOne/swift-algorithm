@@ -66,7 +66,7 @@ class Clock: NSObject {
     
     func BFS(_ target:String, _ deadends: [String]) -> Int {
         
-        var deadSets = Set(deadends)
+        let deadSets = Set(deadends)
         var visitedSets = Set<String>()
         var q = Queue<String>()
         q.enqueue("0000")

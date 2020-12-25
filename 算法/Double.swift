@@ -41,4 +41,38 @@ class DoublePointers: NSObject {
         }
         return slow!
     }
+    
+    func lastKNode(_ head: ListNode?, _ k: inout Int) -> ListNode {
+        var fast = head
+        var slow = head
+        
+        while k > 0 {
+            fast = fast!.next
+            k-=1
+        }
+        
+        while fast != nil {
+            fast = fast!.next
+            slow = slow!.next
+        }
+        return slow!
+    }
+    
+    func twoSum(_ sortNums:[Int], _ target: Int) -> [Int] {
+        var left = 0;
+        var right = sortNums.count - 1
+        while left < right {
+            let sum = sortNums[left] + sortNums[right]
+            if sum == target {
+                return [left + 1, right + 1]
+            }
+            if sum < target {
+                left += 1
+            }
+            if sum > target {
+                right -= 1
+            }
+        }
+        return [-1, -1]
+    }
 }
