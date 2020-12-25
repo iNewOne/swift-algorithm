@@ -24,12 +24,7 @@ class SlideWindow: NSObject {
                 needs[char] = 1
             }
         }
-        var left = 0
-        var right = 0
-        var valid = 0
-        
-        // 记录最小
-        var start = 0
+        var left = 0, right = 0, valid = 0, start = 0
         var length = Int.max
         
         while right < s.count {
@@ -71,5 +66,55 @@ class SlideWindow: NSObject {
         let s_index = s.index(s.startIndex, offsetBy: start)
         let l_index = s.index(s_index, offsetBy: length)
         return String(length == Int.max ? "" : s[s_index..<l_index])
+    }
+    
+    
+    func subStr(_ s: String, _ t: String) -> Bool {
+        var window = [Character: Int]()
+        var needs = [Character: Int]()
+        for char:Character in t {
+            if needs.keys.contains(char) {
+                needs[char]! += 1
+            } else {
+                needs[char] = 1
+            }
+        }
+        var left = 0, right = 0, valid = 0
+        
+        while right < s.count {
+            
+            let rIndex = s.index(s.startIndex, offsetBy: right)
+            let r_Current = s[rIndex]
+            
+            right += 1
+            
+            if needs.keys.contains(r_Current) {
+                if window.keys.contains(r_Current) {
+                    window[r_Current]! += 1
+                } else {
+                    window[r_Current] = 1
+                }
+                if window[r_Current] == needs[r_Current] {
+                    valid += 1
+                }
+            }
+            
+            while right - left >= t.count {
+                if valid == needs.count {
+                    return true
+                }
+                // 开始收缩left
+                let lIndex = s.index(s.startIndex, offsetBy: left)
+                let l_Current = s[lIndex]
+                left += 1
+                if needs.keys.contains(l_Current) {
+                    if window[l_Current] == needs[l_Current] {
+                        valid -= 1
+                    }
+                    window[l_Current]! -= 1
+                }
+            }
+        }
+        return false
     }
 }
