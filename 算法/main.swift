@@ -65,5 +65,4 @@ class Solution {
 
 
 let w = SlideWindow()
-print(w.minStr("ADBBECADFSASFBNAC", "ABC"))
-
+print(w.allSubStr("cbeaebabacd", "abc"))

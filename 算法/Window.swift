@@ -117,4 +117,76 @@ class SlideWindow: NSObject {
         }
         return false
     }
+    
+    func allSubStr(_ s: String, _ t: String) -> [Int] {
+        var window = [Character: Int]()
+        var needs = [Character: Int]()
+        for char:Character in t {
+            if needs.keys.contains(char) {
+                needs[char]! += 1
+            } else {
+                needs[char] = 1
+            }
+        }
+        var allIndex = [Int]();
+        var left = 0, right = 0, valid = 0
+        while right < s.count {
+            let rIndex = s.index(s.startIndex, offsetBy: right)
+            let r_Current = s[rIndex]
+            right += 1
+            
+            if needs.keys.contains(r_Current) {
+                if window.keys.contains(r_Current) {
+                    window[r_Current]! += 1
+                } else {
+                    window[r_Current] = 1
+                }
+                if window[r_Current] == needs[r_Current] {
+                    valid += 1
+                }
+            }
+            
+            while right - left >= t.count {
+                if valid == needs.count {
+                    allIndex.append(left)
+                }
+                let lIndex = s.index(s.startIndex, offsetBy: left)
+                let l_Current = s[lIndex]
+                left += 1
+                if needs.keys.contains(l_Current) {
+                    if window[l_Current] == needs[l_Current] {
+                        valid -= 1
+                    }
+                    window[l_Current]! -= 1
+                }
+            }
+        }
+        return allIndex
+    }
+    
+    
+    func findMaxSubStr(_ s: String) -> Int {
+        var left = 0, right = 0, res = 0
+        var window = [Character: Int]()
+        
+        while right < s.count {
+            let rIndex = s.index(s.startIndex, offsetBy: right)
+            let r_Current = s[rIndex]
+            right += 1
+            if window.keys.contains(r_Current) {
+                window[r_Current]! += 1
+            } else {
+                window[r_Current] = 1
+            }
+            
+            while window[r_Current]! > 1 {
+                let lIndex = s.index(s.startIndex, offsetBy: left)
+                let l_Current = s[lIndex]
+                left += 1
+                window[l_Current]! -= 1
+            }
+            res = max(res, right - left)
+        }
+        return res
+    }
 }
